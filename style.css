@@ -2,10 +2,39 @@
     text-align: center;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative; /* Required for pseudo-element positioning */
+    overflow: hidden; /* Prevent scrolling caused by pseudo-element */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://ap-pics2.gotpoem.com/ap-pics/item/16135/45.jpg?images2jpeg834') no-repeat center center fixed; /* Replace 'background.jpg' with your image file */
+    background-size: cover;
+    filter: blur(5px); /* Adds blur effect to the background */
+    z-index: -1; /* Ensures it stays behind all other elements */
+}
+
+h1, h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+}
+
 .btn-container {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative; /* Ensures buttons are not affected by the blur */
+    z-index: 1;
 }
 
 .btn {
@@ -61,6 +90,7 @@
 
     .btn {
         height: 100px;
+        
         width: 100px;
         margin: 1rem;
         border-width: 5px;
