@@ -10,14 +10,22 @@ let btns=["red","green","yellow","purple"]
 
 
 
-document.addEventListener("keypress",function(){
-    if(started==false){
-        console.log("game is started")
-        started=true;
-    }
-    levelup();
-})
+document.addEventListener("keypress", startGame); // For PC keypress
 
+document.addEventListener("click", function (event) {
+    // Check if the click is outside the game buttons to avoid interference
+    if (!event.target.classList.contains("btn")) {
+        startGame();
+    }
+});
+
+function startGame() {
+    if (!started) {
+        console.log("Game is started");
+        started = true;
+        levelup();
+    }
+}
 
 function gameflash(btn){
   
