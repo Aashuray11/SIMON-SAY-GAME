@@ -1,58 +1,68 @@
-*{
-    
-text-align: center;
+* {
+    text-align: center;
 }
 
-
-
-.btn-container{
+.btn-container {
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.btn{
-    border:2px solid black;
-    height:200px;
-    width:200px;
+.btn {
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
     border-radius: 20%;
-    border:10px solid black;
-    margin:2.5rem;
+    border: 10px solid black;
+    margin: 2.5rem;
 }
 
-.red{
-background-color: #d95988;
+/* Colors */
+.red {
+    background-color: #d95988;
 }
-
-.yellow{
+.yellow {
     background-color: #f99b45;
 }
-.green{
-    background-color:#63aac0;
+.green {
+    background-color: #63aac0;
+}
+.purple {
+    background-color: #819ff9;
 }
 
-.purple{
-    background-color:#819ff9;
-}
-
-.gameflash{
+.gameflash {
     background-color: white;
 }
-
-.userflash{
+.userflash {
     background-color: rgb(34, 126, 65);
 }
-/*
 
-.line-one :nth-of-type(1){
-    background-color: aqua;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        height: 150px;
+        width: 150px;
+        margin: 1.5rem;
+        border-width: 7px;
+    }
 }
-.line-one .btn:nth-of-type(2){
-    background-color: rgb(46, 21, 155);
+
+@media (max-width: 480px) {
+    * {
+        font-size: 14px;
+    }
+
+    .btn-container {
+        justify-content: center; /* Ensure buttons remain justified */
+        display: flex; /* Keep flex layout */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+    }
+
+    .btn {
+        height: 100px;
+        width: 100px;
+        margin: 1rem;
+        border-width: 5px;
+    }
 }
-.line-two :nth-of-type(1){
-    background-color: rgb(20, 143, 40);
-}
-.line-two .btn:nth-of-type(2){
-    background-color: rgb(135, 23, 111);
-}
-*/
